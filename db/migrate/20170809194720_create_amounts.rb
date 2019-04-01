@@ -1,4 +1,4 @@
-class CreateAmounts < ActiveRecord::Migration[5.1]
+class CreateAmounts < ActiveRecord::Migration[4.2]
   def change
     create_table :amounts do |t|
       t.float :number
