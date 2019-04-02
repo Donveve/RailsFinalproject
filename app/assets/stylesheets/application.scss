@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 body {
-  background-image: url('https://i.imgur.com/wCJltG3.jpg');
+  background-image: url('https://i.imgur.com/ULF9MdA.png');
    background-repeat: no-repeat;
   // text-shadow: 1px 1px 2px rgb(150, 150, 150);
   // font-family: 'Libre Baskerville', serif;
@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-  color: #918274;
+  color: #96CB1C;
 }
 
 .selection {
@@ -25,11 +25,11 @@ h1 {
 }
 
 .container {
-  background-color: #C0C0C0;
-  background-color: #f2ebe3;
-  box-shadow: 10px 10px 5px rgba(56, 29, 42, 0.50);
-  border-radius: 5px;
-  padding: 5px;
+  // background-color: #C0C0C0;
+  // background-color: #f2ebe3;
+  // box-shadow: 10px 10px 5px rgba(56, 29, 42, 0.50);
+  // border-radius: 5px;
+  // padding: 5px;
 }
 
 .list-group {
@@ -84,26 +84,26 @@ h1 {
   background-image: url("vegetarian.jpg");
 }
 
-$bgDefault: #381d2a;
-$bgHighlight: #ba5624;
-$colDefault: #ecf0f1;
-$colHighlight: #eee7da;
+$bgDefault: white;
+$bgHighlight: green;
+$colDefault: white;
+$colHighlight: green;
 $dropDown: false;
 .navbar {
-  background-color: $bgDefault;
+   background-color:#FF9033 ;
   .navbar-brand {
-    color: $colDefault;
+    color: white;
     &:hover,
     &:focus {
-      color: $colHighlight;
+       color: $colHighlight;
     }
   }
   .navbar-text {
-    color: $colDefault;
+     color: white;
   }
   .navbar-nav {
     .nav-link {
-      color: $colDefault;
+       color: white;
       border-radius: .25rem;
       margin: 0 0.25em;
       &:not(.disabled) {
@@ -118,7 +118,7 @@ $dropDown: false;
         background-color: $bgDefault;
         border-color: $bgHighlight;
         .dropdown-item {
-          color: $colDefault;
+          color: white;
           &:hover,
           &:focus,
           &.active {
@@ -136,8 +136,8 @@ $dropDown: false;
       .nav-link,
       .nav-link:hover,
       .nav-link:focus {
-        color: $colHighlight;
-        background-color: $bgHighlight;
+        color: white;
+         background-color: $bgHighlight;
       }
     }
   }
@@ -145,7 +145,7 @@ $dropDown: false;
     border-color: $bgHighlight;
     &:hover,
     &:focus {
-      background-color: $bgHighlight;
+       background-color: $bgHighlight;
     }
     .navbar-toggler-icon {
       color: $colDefault;
@@ -153,10 +153,10 @@ $dropDown: false;
   }
   .navbar-collapse,
   .navbar-form {
-    border-color: $colDefault;
+     border-color: $colDefault;
   }
   .navbar-link {
-    color: $colDefault;
+     color: white;
     &:hover {
       color: $colHighlight;
     }
@@ -169,7 +169,7 @@ $dropDown: false;
   }
   .navbar .navbar-nav .open .dropdown-menu {
     .dropdown-item {
-      color: $colDefault;
+       color: $colDefault;
       &:hover,
       &:focus {
         color: $colHighlight;
