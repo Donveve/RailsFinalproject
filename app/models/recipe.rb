@@ -1,7 +1,4 @@
-class Recipe < ActiveRecord::Base
-	has_many :ingredients
-	has_many :directions
-	belongs_to :userclass Recipe < ApplicationRecord
+class Recipe < ApplicationRecord
 	has_many :favorites
 	has_many :users, through: :favorites
 	has_many :comments
@@ -26,10 +23,9 @@ class Recipe < ActiveRecord::Base
 	 return 'No Ratings!' if result.nan?
 	 result.round(2)
 	end
-
-	accepts_nested_attributes_for :ingredients, reject_if: :all_blank, allow_destroy: true
-	accepts_nested_attributes_for :directions, reject_if: :all_blank, allow_destroy: true
-
-	validates :title, presence: true
-	mount_uploader :image, ImageUploader
-end
+  
+  
+  
+  
+  end
+  
