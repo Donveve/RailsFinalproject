@@ -11,13 +11,28 @@ body {
     color: #fcf8e3!important;
 }
 
+
+.footer {
+  margin-top: 60px;
+  position: fixed;
+  left: 0;
+  // bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  clear: both;
+  padding-top: 50px;
+  border-top: 5px solid #FF9033;
+  color:#FF9033; }
+
+
 h1 {
   color: #96CB1C;
   font-family: impact;
 
 }
-h3{
-  margin-right: 15px;
+h4 {
+  margin-right: 110px;
   font-weight: bold;
   color: #FF9033 ;
 }
