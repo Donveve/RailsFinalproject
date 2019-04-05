@@ -1,8 +1,33 @@
-<h1 class="text-center">Happy cooking with Good Recipe</h1>
-  <div class="row text-center">
-  <% @categories.each do |category| %>
-  <div class="col-md-4 category" >
-   <%= link_to "#{category.name}", category_path(category), class: "picture-#{category.id} picture" %>
-  </div>
-  <% end %>
-  </div>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body class = "index">
+<h1 class="text-rigth">Happy cooking with Good Recipe</h1>
+<div class="row text-center">
+<% @categories.each do |category| %>
+<div class="col-md-4 category" >
+ <%= link_to "#{category.name}", category_path(category), class: "picture-#{category.id} picture" %>
+</div>
+<% end %>
+</div>
+
+<div class="container1">
+      
+        <h3> welcome to Good Recipe</h3>
+
+        <p class="text-justify"> We’d like to be your online kitchen helper.<br/>  Will you let us?  If so, we’re always here<br/>  for you 24 hours a day seven days per week, <br/> always ready to show and tell you how to prepare the most delicious soul food <br/> that’ll ever touch your tongue from this day forward. So go ahead, get comfortable, <br/> sit, and look around the website.<br/>  Just take your time as you look around no need to rush.</p>
+        <p class="text-justify">We have all of your favorite recipes right here.<br/>   You’ll also be presently surprised <br/> to see that our recipes contain easy-to-follow cooking instructions. <br/>  Even better, quite a few of our recipes come<br/>  with illustrative photographs of the finished dished so you can really see what the dish will look like on your table.</p>
+      
+        </div>
+
+</div>
+
+</body>
+</html>
+
+

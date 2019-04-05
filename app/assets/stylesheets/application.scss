@@ -1,8 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-body {
+body.index{
   background-image: url('https://i.imgur.com/ULF9MdA.png');
-   background-repeat: no-repeat;
+  background-repeat: no-repeat;
   // text-shadow: 1px 1px 2px rgb(150, 150, 150);
   // font-family: 'Libre Baskerville', serif;
 
@@ -12,33 +12,31 @@ body {
 }
 
 
-.footer {
-  margin-top: 60px;
-  position: fixed;
-  left: 0;
-  // bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-  clear: both;
-  padding-top: 50px;
-  border-top: 5px solid #FF9033;
-  color:#FF9033; }
+// .footer {
+  // left: 0;
+  // // bottom: 0;
+  // width: 100%;
+  // color: white;
+  // text-align: center;
+  // clear: both;
+  // padding-top: 50px;
+  // border-top: 5px solid #FF9033;
+  // color:#FF9033; }
 
 
 h1 {
   color: #96CB1C;
   font-family: impact;
+  
 
 }
-h4 {
-  margin-right: 110px;
+h3 {
+  // margin-right: 70px;
   font-weight: bold;
   color: #FF9033 ;
 }
-.text-right{
-  margin-left: 950px;
-}
+.text-rigth{
+margin-right:170px; }
 
 .selection {
   padding: 5px;
@@ -57,12 +55,9 @@ h4 {
 
 }
 
-.container {
-  // background-color: #C0C0C0;
-  // background-color: #f2ebe3;
-  // box-shadow: 10px 10px 5px rgba(56, 29, 42, 0.50);
-  // border-radius: 5px;
-  // padding: 5px;
+.container1  {margin-top: 20px;
+  color: black!important;
+margin-left: 850px;
 }
 
 .list-group {
