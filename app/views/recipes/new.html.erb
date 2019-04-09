@@ -1,12 +1,9 @@
 
 <h1>What would you like to cook</h1>
-</br>
 <%= form_for(@recipe) do |f| %>
 <% if @recipe.errors.any? %>
 <div id="error_explanation">
-  <h2>
-    Can't save recipe because <%= pluralize(@recipe.errors.count, "error") %>!
-  </h2>
+  <h2> Can't save recipe because <%= pluralize(@recipe.errors.count, "error") %>!</h2>
   <ul>
     <% @recipe.errors.full_messages.each do |msg| %>
     <li><%= msg %></li>

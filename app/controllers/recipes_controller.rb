@@ -18,6 +18,7 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
+    @categories=Category.all
     if request.xhr?
       render partial: 'ingredient_form'
     else
@@ -34,12 +35,12 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(recipe_params)
+   @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
     all = params[:recipe_ingredients][:recipe_ingredients]
     all.each do |stat|
       @ingredient = Ingredient.find_or_create_by(name: stat[:ingredient])
-      @metric = Metric.find(stat[:metric])
+      @metric = Metric.find_by(stat[:metric])
       @amount = Amount.find_or_create_by(number: stat[:amount])
       next unless @recipe.save
       @recipe.recipe_ingredients.create(
@@ -54,22 +55,36 @@ class RecipesController < ApplicationController
       render action: 'new'
     end
   end
+  # def create
+  #   recipe = current_user.recipes.new(recipe_params)
+  #   if recipe.save
+  #     # recipe.add_ingredients_to_recipe(recipe_ingredients_params)
+  #     @recipe.recipe_ingredients.create(
+  #    ingredient: @ingredient,
+  #       metric: @metric,
+  #     amount: @amount)
+  #     redirect_to recipe_path(recipe), notice: "Your recipe has successfully been added"
+  #   else
+  #     @recipe = Recipe.new
+  #     redirect_to new_recipe_path, alert: recipe.errors.full_messages.each {|m| m}.join
+  #   end
+  # end
 
-  def update
-    @recipe = Recipe.find(params[:id])
-    if owns_recipe(current_user, @recipe)
-      if @recipe.update(params[:recipe])
-        redirect_to @recipe
-      else
-        render action: 'edit'
-      end
-      if @recipe.update_attributes(recipe_params)
-        redirect_to @recipe
-      else
-        raise ActionController::RoutingError, 'Not Found'
-      end
-    end
-  end
+  # def update
+  #   @recipe = Recipe.find(params[:id])
+  #   if owns_recipe(current_user, @recipe)
+  #     if @recipe.update(params[:recipe])
+  #       redirect_to @recipe
+  #     else
+  #       render action: 'edit'
+  #     end
+  #     if @recipe.update_attributes(recipe_params)
+  #       redirect_to @recipe
+  #     else
+  #       raise ActionController::RoutingError, 'Not Found'
+  #     end
+  #   end
+  # end
 
   def destroy
     @recipe = Recipe.find(params[:id])

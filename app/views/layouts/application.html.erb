@@ -23,7 +23,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Good Recipe</a>
+      <a class="navbar-brand" href="/">Home</a>
     </div>
 
 
@@ -36,6 +36,8 @@
             <% end %>
           </div>
           <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to('Recipes', recipes_path) %></li>
+
             <li><%= link_to "Add Recipe", new_recipe_path%></li>
             <li><%= link_to "#{current_user.email}", current_user%></li>
             <!--         need to create route for show -->
@@ -52,7 +54,6 @@
           <% end %>
         </div>
         <ul class="nav navbar-nav navbar-right">
-
           <li><%= link_to('Sign in', new_user_session_path) %></li>
           <li><%= link_to('Sign up', new_user_registration_path) %></li>
         </ul>
@@ -60,7 +61,6 @@
       <% end %>
     </div><!-- /.container-fluid -->
   </nav>
-
 
 
 </header>
