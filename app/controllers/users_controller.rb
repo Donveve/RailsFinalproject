@@ -5,6 +5,8 @@ class UsersController < ApplicationController
      @user = User.find(params[:id])
     @recipes = Recipe.all
      @favorites = @user.favorites
+     @categories = Category.all
+
   end
   
 end
